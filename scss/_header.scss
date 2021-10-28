@@ -1,0 +1,87 @@
+.header {
+
+  nav {
+    background-color: $text-color;
+
+    .mobile-menu {
+      a {
+        &:hover { background-color: $primary-color-hover; }
+      }
+        
+    }
+  }
+  
+  .header-content {
+    max-width: 1024px;
+    margin: 150px auto 0 auto;
+    padding: 10px 15px;
+
+    h3 {
+      font-size: 1.3em;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 16px;
+      font-weight: bold;
+      color: $soft-text-color;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: $text-color;
+      line-height: 1.5em;
+      margin-bottom: 20px;
+      strong {
+        width: 11ch;
+        display: block;
+      }
+    }
+
+    p {
+      color: $primary-color;
+      line-height: 1.5em;
+    }
+
+    .button-primary {
+      @include button-primary();
+    }
+
+    .icons {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0 50px 0;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      max-width: 400px;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+  }
+
+  @include queries(tablet) {
+    
+    .header-content {
+      font-size: 1.2em;
+    }
+  }
+
+  @include queries(desktop) {
+
+    .header-content {
+      display: flex;
+      gap: 30px;
+      .profile-pic {
+        align-content: center;
+        height: 100%;
+        width: 100%;
+      }
+
+    }
+
+  }
+
+
+
+}

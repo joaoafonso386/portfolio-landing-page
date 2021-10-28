@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="scss/normalize.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="scss/index.css">
+  <title>Portfolio Website</title>
+</head>
+<body>
+  <header class="header">
+    <nav class="fixed top-0 right-0 left-0 z-10">
+      <div class="flex justify-between items-center max-w-screen-lg mx-auto py-6 px-6">
+        <div class="w-56">
+          <a href="#">
+            <img src="assets/logo.png" alt="Website logo. João Afonso is a Front-end Developer">
+          </a>
+        </div>
+        <div class="space-x-10 hidden sm:flex">
+          <a class="text-white text-lg hover:text-gray-200"href="#skills">Skills</a>
+          <a class="text-white text-lg hover:text-gray-200"href="#resume">Resume</a>
+          <a class="text-white text-lg hover:text-gray-200"href="#contact">Contact</a>
+        </div>
+        <div class="sm:hidden flex items-center">
+          <button type="button" class="hamburguer-button">
+            <svg vg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+              <path stroke="#ffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="sm:hidden mobile-menu hidden">
+        <a class="block text-white py-2 px-4 text-sm" href="#skills">Skills</a>
+        <a class="block text-white py-2 px-4 text-sm" href="#resume">Resume</a>
+        <a class="block text-white py-2 px-4 text-sm" href="#contact">Contact</a>
+      </div>
+    </nav>
+    <article class="header-content">
+      <div class="header-flex">
+        <h3>Hello</h3>
+        <h1>I'm<strong>João Afonso</strong> Future Web Developer</h1>
+        <p>With a degree in marketing and a full-stack development course, I now want to join both areas in one stack. </p>
+        <button class="button-primary" type="button">Contact Me</button>
+        <div class="icons">
+          <a href="#"><img src="assets/linkedin.svg" alt=""></a>
+          <a href="#"><img src="assets/email.svg" alt=""></a>
+          <a href="#"><img src="assets/github.svg" alt=""></a>
+        </div>
+      </div>
+      <img class="profile-pic" src="assets/profile2.jpg">
+    </article>
+  </header>
+  <main>
+    <div  class="main-skills">
+      <article>
+        <section id="skills" class="intro">
+          <h2>What Can I Do</h2>
+          <span class="underline"></span>
+          <p>Experienced in digital marketing and computer programming I can be a valuable asset to understand technical requirements and business logic</p>
+          </section>
+          <section class="wrapper">
+            <div class="cards">
+              <img src="./assets/web-design.png">
+              <h3>Web Design</h3>
+              <p>Working on developing layouts for websites</p>
+            </div>
+            <div class="cards">
+              <img src="./assets/responsive-design.png">
+              <h3>Responsive</h3>
+              <p>Making layouts adapt to any screen size</p>
+            </div>
+            <div class="cards">
+              <img src="./assets/development.png">
+              <h3>Development</h3>
+              <p>Front to back application building and testing</p>
+            </div>
+            <div class="cards">
+              <img src="./assets/seo-friendly.png">
+              <h3>SEO Friendly</h3>
+              <p>Working with search engines to optimize performance</p>
+            </div>
+            <div class="cards">
+              <img src="./assets/graphics-design.png">
+              <h3>Graphics Design</h3>
+              <p>Creating pixel perfect prototypes to implement</p>
+            </div>
+            <div class="cards">
+              <img src="./assets/support.png">
+              <h3>Support</h3>
+              <p>Able to work in teams to better development environment</p>
+            </div>
+          </section>
+        </article>
+        
+        <article id="resume" class="main-skills-resume">
+          <section class="intro">
+            <h2>My Resume</h2>
+            <span class="underline"></span>
+            <p>Starting with a bachelors degree and finishing with a postgrad degree I have been academically successful during all my life</p>
+          </section>
+          <div class="flex-content">
+            <section class="content-work-academic">
+              <h3>Work Experience</h3>
+              <div>
+                <h4 class="date">2018 - 2019</h4>
+                <h4 class="title">Youzz</h4>
+                <h5>Marketing Influencing</h5>
+                <p>Developed contacts with influencers and helped create a strong social media presence</p>
+              </div>
+              <div>
+                <h4 class="date">2020 - 2021</h4>
+                <h4 class="title">Caiado Guerreio</h4>
+                <h5>Digital Marketing</h5>
+                <p>Worked as media planner and helped the company to have better visibility online</p>
+              </div>
+            </section>
+            <section class="content-work-academic">
+              <h3>Education</h3>
+              <div>
+                <h4 class="date">2018 - 2019</h4>
+                <h4 class="title">ULHT - Universidade Lusófona</h4>
+                <h5>Bachelors in Marketing and PR</h5>
+                <p>First steps as a marketer, helped me choose what I was really interested about</p>
+              </div>
+              <div>
+                <h4 class="date">2019-2020</h4>
+                <h4 class="title">NOVA IMS</h4>
+                <h5>Post-grad in Digital Marketing</h5>
+                <p>Specific knowledge in digital marketing and digital marketing tools</p>
+              </div>
+            </section>
+          </div>
+        </article>
+        
+        <article class="contact" id="contact">
+          <div class="intro">
+            <h2>Contact Me</h2>
+            <span class="underline"></span>
+            <p>Feel free to reach out and contact me for a specific proposal</p>
+          </div>
+          <div class="cards-flex">
+            <div class="cards">
+              <div class="border">
+                <img src="assets/location.svg" alt="">
+              </div>
+              <h3>Location</h3>
+              <p>Lisbon</p>
+            </div>
+            <div class="cards">
+              <div class="border">
+                <img src="assets/mail.svg" alt="">
+              </div>
+              <h3>My Email</h3>
+              <p>joaoafonso386@gmail.com</p>
+            </div>
+            <div class="cards">
+              <div class="border">
+                <img src="assets/phone.svg" alt="">
+              </div>
+              <h3>Call Me</h3>
+              <p>+351 935419875</p>
+            </div>
+          </div>
+          <form action="#" method="#">
+            <label>
+              <input type="text" placeholder="Your Name" required minlength="2" maxlength="50">
+            </label>
+            <label>
+              <input type="email" placeholder="Your Email" required>
+            </label>
+            <label>
+              <input type="phone" placeholder="Your Phone" required>
+            </label>
+            <textarea placeholder="Type your message here"cols="30" rows="10"></textarea>
+            <button class="button-primary" type="submit">Send Message</button>
+          </form>
+        </article>
+      </div>
+    </main>
+    
+    <footer style="text-align: center; background-color: #ccc; padding: 30px 0;">
+      © Copyright <strong>João Afonso</strong>. All Rights Reserved
+    </footer>
+    
+    <script>
+      
+      //Simple script to open and close the mobile menu using the toggle class method
+      const hamburguerButton = document.querySelector("button.hamburguer-button");
+      const mobileMenu = document.querySelector(".mobile-menu");
+      
+      hamburguerButton.addEventListener('click', () => { 
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+    </script>
+  </body>
+  </html>

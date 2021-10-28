@@ -1,0 +1,275 @@
+main {
+  background-color: $section-bckg-color;
+  
+  .main-skills {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    .intro {
+      text-align:center;
+      scroll-margin-top: 100px;
+
+      h2 {
+        font-size: 1.5em;
+        padding-top: 20px;
+        margin-top: 50px;
+        font-weight: bold;
+        color: $secondary-color;
+      }
+      
+      .underline {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        background-color: $third-color;
+        display: block;
+        margin: 20px auto;
+        border-radius: 50%;
+        &::before {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 3px;
+          background-color: black;
+          border-radius: 25px;
+          position: absolute;
+          left: 17px;
+          top: 3.5px;
+        }
+        &::after {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 3px;
+          background-color: black;
+          border-radius: 25px;
+          position: absolute;
+          right: 17px;
+          top: 3.5px;
+        }
+        
+      }
+      
+      p {
+        line-height: 1.5em;
+        padding: 0 20px;
+        color: $secondary-color;
+      }
+      
+    }
+    
+    .wrapper {
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin: 60px 0;
+      
+      .cards {
+        
+        background-color: white;
+        width: 90%;
+        padding: 20px;
+        border-radius: 20px;
+        border-left: 3px solid transparent;
+        transition: border .5s ease;
+        &:hover {
+          border-left: 3px solid $third-color;
+        }
+        
+        img {
+          width: 100px;
+        }
+        
+        h3 {
+          font-size: 1.6em;
+          font-weight: bold;
+          color: $secondary-color;
+          margin: 15px 0;
+        }
+        
+        p {
+          color: $soft-text-color;
+          line-height: 1.3em;
+        }
+        
+      }
+    }
+    
+    .main-skills-resume {
+      scroll-margin-top: 100px;
+    
+      
+      .flex-content { 
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px 20px 28px;
+        
+        .content-work-academic {
+          
+          h3 {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            margin-top: 50px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            color: $secondary-color;
+            position: relative;
+            &::after {
+              content: "";
+              clear: both;
+              display: block;
+              overflow: hidden;
+              position: absolute;
+              left: 0;
+              bottom: 0px;
+              width: 64px;
+              height: 4px;
+              background: #ff4d57;
+            }
+          }
+          
+          
+          .date {
+            background: #ff4d57;
+            background-clip: border-box;
+            padding: 0px 13px;
+            line-height: 26px;
+            letter-spacing: .75px;
+            font-size: 12px;
+            color: #fff;
+            position: relative;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            background-clip: padding-box;
+            display: inline-block;
+            text-transform: uppercase;
+          }
+          
+          .title {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+            color: $secondary-color;
+            font-weight: 501;
+          }
+          
+          h5 {
+            margin-bottom: 20px;
+            color: $primary-color;
+            font-size: 1em;
+          }
+          
+          p {
+            color: $soft-text-color;
+            margin-bottom: 20px;
+          }
+          
+        }
+        
+      }
+    }
+  }
+  
+  .contact {
+    scroll-margin-top: 100px;
+    .cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      width: 90%;
+      margin: 40px auto 30px auto;
+      box-shadow: 0px 0px 10px #00000017;
+      padding: 40px 50px;
+      background: #fff;
+      transition: transform .6s ease ;
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      p {
+        margin-top: 12px;
+      }
+    }
+
+    .border {
+      border-radius: 50%;
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px dashed $third-color;
+    }
+
+    h3 {
+      font-weight: bold;
+      color: $text-color;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 40px;
+
+
+        label {
+          align-self: center;
+          width: 90%;
+        }
+      
+        input, textarea {
+        align-self: center;
+        width: 100%;
+        margin-top: 20px;
+        padding: 15px;
+        border: .5px solid transparent;
+        transition: border .5s ease;
+        resize: none;
+        &:focus-visible {
+          border: .5px solid $primary-color;
+          outline: none;
+        }
+      
+      }
+
+      textarea {
+        width: 90%;
+      }
+
+      .button-primary {
+        @include button-primary();
+        align-self: flex-start;
+        margin-left: 5%;
+      }
+
+    }
+    
+  }
+
+  @include queries(desktop) {
+
+    .main-skills {
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+        gap: 30px;
+        width: 100%;
+        margin:25px auto 0 auto;
+      }
+
+      .main-skills-resume {
+        .flex-content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr) ;
+          gap: 40px;
+        }
+      }
+
+    }
+
+  }
+  
+}
